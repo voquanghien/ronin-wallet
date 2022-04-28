@@ -1,0 +1,30 @@
+.header-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .left {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    .dot {
+      height: 8px;
+      width: 8px;
+      background-color: #1273EA;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .user-name {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+
+  .right {
+    img {
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
