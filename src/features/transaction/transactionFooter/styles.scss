@@ -1,0 +1,12 @@
+.transaction-footer {
+  display: flex;
+  justify-content: space-between;
+
+  .button-container {
+    width: calc(100% / 2 - 10px);
+
+    .button-element {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.transaction-content {
+  flex: 1 1 auto;
+  padding-top: 35px;
+
+  .input-ele {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &.asset {
+      .currency-container {
+        display: flex;
+        align-items: center;
+
+        .currency-img {
+          width: 24px;
+          height: 24px;
+          margin-right: 5px;
+        }
+
+        .currency-title {
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+
+      .img-container {
+        display: flex;
+        align-items: center;
+
+        .asset-icon {
+          cursor: pointer;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    &.amount {
+      .max-btn {
+        cursor: pointer;
+        background-color: #EEF3FB;
+        border-radius: 8px;
+        padding: 2px 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          color: #57627B;
+          font-size: 10px;
+          font-weight: 700;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}
