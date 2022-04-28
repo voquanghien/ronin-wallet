@@ -8,6 +8,7 @@ import './styles.scss';
 
 const Popup = () => {
   const popupData = useSelector(getPopupData);
+  // get popup content based on popupType
   const popupElement = () => {
     switch (popupData.popupType) {
       case PopupTypeEnum.ASSETS:

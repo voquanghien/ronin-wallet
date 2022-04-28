@@ -15,7 +15,10 @@ const HomePage = () => {
     <div className="common-page home-page">
       <div className="combine-element">
         <div className="combine-container">
-          <HeaderComponent name={userInfo.name} />
+          <HeaderComponent
+            name={userInfo.name}
+            onClick={() => navigate("/logout")}
+          />
 
           <WalletComponent
             walletAddress={userInfo.walletAddress}

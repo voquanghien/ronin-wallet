@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import deposit from '../../../assets/action/deposit.svg';
 import send from '../../../assets/action/send.svg';
 import swap from '../../../assets/action/swap.svg';
@@ -31,5 +32,23 @@ const ActionComponent = (props) => {
     </div>
   );
 };
+
+ActionComponent.propTypes = {
+  isSend: PropTypes.bool,
+  isDeposit: PropTypes.bool,
+  isSwap: PropTypes.bool,
+  sendClick: PropTypes.func,
+  depositClick: PropTypes.func,
+  swapClick: PropTypes.func
+}
+
+ActionComponent.defaultProps = {
+  isSend: false,
+  isDeposit: false,
+  isSwap: false,
+  sendClick: () => {},
+  depositClick: () => {},
+  swapClick: () => {}
+}
 
 export default ActionComponent;

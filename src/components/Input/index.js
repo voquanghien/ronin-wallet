@@ -39,7 +39,7 @@ const Input = props => {
           value={props.value}
           onChange={onChange}
           placeholder={props.placeholder}
-          disabled={props.isDisabled || props.isSelection}
+          disabled={props.isDisabled}
           onClick={onClick}
         />
 

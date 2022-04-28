@@ -1,8 +1,9 @@
-// A mock function to mimic making an async request for data
+// A mock function to make an async request for data
 export function fetchUserPassword() {
   return fetch('./mock/password.json');
 }
 
+// A mock function to make an async request for data
 export function fetchUserInfo() {
   return fetch('./mock/info.json');
 }

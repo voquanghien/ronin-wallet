@@ -10,7 +10,7 @@ const Loading = () => {
     ? <div className="loading-component">
         <img src={loadingGif} alt="Loading" />
       </div>
-    : <></>
+    : null
 }
 
 export default Loading;

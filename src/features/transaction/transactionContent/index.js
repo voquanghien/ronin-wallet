@@ -10,6 +10,7 @@ import { formatBalance } from '../../../utils';
 import { PopupTypeEnum } from '../../../utils/popupEnum';
 import asset from '../../../assets/asset.svg';
 import { isNumber } from 'lodash';
+import { inputTypeEnum } from '../../../utils/inputTypeEnum';
 import './styles.scss';
 
 const TransactionContentComponent = () => {
@@ -60,6 +61,8 @@ const TransactionContentComponent = () => {
         <Input
           isSelection={true}
           leftTitle="Asset"
+          onClick={openAssetPopup}
+          inputType={inputTypeEnum.SUBMIT}
           leftElement={
             <div className="currency-container">
               <img className="currency-img" src={currencyEnum[userInfo.currentBalanceUnit].img} alt="currency icon" />

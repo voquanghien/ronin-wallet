@@ -27,7 +27,7 @@ const reducers = combineReducers({
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['loading', 'transaction', 'popup']
+  blacklist: ['loading', 'transaction', 'popup'] // define non persist state
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);

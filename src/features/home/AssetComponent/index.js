@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { formatBalance } from '../../../utils';
 import { currencyEnum } from '../../../utils/currencyEnum';
@@ -44,5 +45,15 @@ const AssetComponent = props => {
     </div>
   );
 };
+
+AssetComponent.propTypes = {
+  balances: PropTypes.object,
+  currentBalanceUnit: PropTypes.string
+}
+
+AssetComponent.defaultProps = {
+  balances: {},
+  currentBalanceUnit: ""
+}
 
 export default AssetComponent;

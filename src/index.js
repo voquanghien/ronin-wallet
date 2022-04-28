@@ -9,6 +9,7 @@ import { persistStore } from 'redux-persist';
 import { getCurrencyRate } from './app/slices/currencyRateSlice';
 import * as serviceWorker from './serviceWorker';
 
+// persist store
 let persistor = persistStore(store)
 store.dispatch(getCurrencyRate());
 const root = ReactDOM.createRoot(document.getElementById("root"));

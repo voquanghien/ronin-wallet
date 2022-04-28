@@ -15,17 +15,20 @@ import './App.scss';
 function App() {
   const isLoading = useSelector(selectLoading);
   const isLoggedIn = useSelector(isUserLoggedIn);
+
+  //setup routes
   const routes = [
-    <Route path="/login" element={isLoggedIn ? <Navigate to={"/home"} /> : <LoginPage />} />,
-    <Route path="*" element={<Navigate to={isLoggedIn ? "/home" : "/login"} />} />
+    <Route key="login-route" path="/login" element={isLoggedIn ? <Navigate to={"/home"} /> : <LoginPage />} />,
+    <Route key="any-route" path="*" element={<Navigate to={isLoggedIn ? "/home" : "/login"} />} />
   ];
   if (isLoggedIn) {
     routes.push(
-      <Route path="/home" element={<HomePage />} />,
-      <Route path="/transaction" element={<TransactionPage />} />,
-      <Route path="/logout" element={<LogoutPage />} />
+      <Route key="home-route" path="/home" element={<HomePage />} />,
+      <Route key="transaction-route" path="/transaction" element={<TransactionPage />} />,
+      <Route key="logout-route" path="/logout" element={<LogoutPage />} />
     )
   }
+
   return (
     <div className="App">
       <div className={classNames([

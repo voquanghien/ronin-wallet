@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import copy from '../../../assets/copy.svg';
 import logoWhite from '../../../assets/logo-white.svg';
@@ -7,7 +8,7 @@ import { getAllCurrencyRate } from '../../../app/slices/currencyRateSlice';
 import './styles.scss';
 
 const WalletComponent = props => {
-  const copyToClipboard = value => {
+  const copyText = value => {
     navigator.clipboard.writeText(value);
   };
 
@@ -27,7 +28,7 @@ const WalletComponent = props => {
           className="copy"
           src={copy}
           alt="Copy"
-          onClick={() => copyToClipboard(`${props.walletAddress}`)}
+          onClick={() => copyText(`${props.walletAddress}`)}
           aria-hidden="true"
         />
       </div>
@@ -45,5 +46,17 @@ const WalletComponent = props => {
     </div>
   );
 };
+
+WalletComponent.propTypes = {
+  walletAddress: PropTypes.string,
+  balances: PropTypes.object,
+  currentBalanceUnit: PropTypes.string
+}
+
+WalletComponent.defaultProps = {
+  walletAddress: "",
+  balances: {},
+  currentBalanceUnit: ""
+}
 
 export default WalletComponent;

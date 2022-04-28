@@ -4,6 +4,7 @@ import YEN from '../assets/currency/YEN.png';
 import BTC from '../assets/currency/BTC.png';
 import ETH from '../assets/currency/ETH.png';
 
+// define enum for currency
 export const currencyEnum = Object.freeze({
 	USD: {
     img: USD,
