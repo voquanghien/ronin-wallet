@@ -1,0 +1,26 @@
+.logout-page {
+  display: flex;
+  flex-direction: column;
+
+  .logout-page-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    margin: 60px 20px 20px;
+    background-image: url('../../assets/background/bg1.png');
+    background-size: 100% 100%;
+    .logo-img {
+      padding-top: 30px;
+      padding-bottom: 15px;
+      width: 50%;
+    }
+  }
+
+  .logout-btn {
+    width: 100%;
+  }
+}
