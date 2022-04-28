@@ -1,0 +1,29 @@
+.confirm-popup {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 30%;
+
+  .confirm-popup-header {
+    padding: 10px 0 0;
+    
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+    };
+  }
+
+  .confirm-popup-content {
+    text-align: left;
+    padding: 25px 0;
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .confirm-popup-footer {
+    .confirm-btn {
+      width: 100%;
+    }
+  }
+}
