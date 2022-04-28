@@ -1,0 +1,9 @@
+{
+  "name": "Ronin Wallet",
+  "walletAddress": "7300 3777 3888 3334",
+  "balances": {
+    "USD": 1000,
+    "EUR": 50,
+    "YEN": 10000
+  }
+}
