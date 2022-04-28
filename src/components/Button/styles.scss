@@ -1,0 +1,35 @@
+.btn-container {
+  .btn {
+    height: 40px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #F7F9FC;
+    color: #1A8EF2;
+    outline: none;
+    border: 2px solid transparent;
+
+    &.active {
+      background: #1A8EF2;
+      color: #FFFFFF;
+    }
+
+    &.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &:active, &:hover, &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      &:not(.disabled) {
+        border-color: #C2C3C4;
+        &.active {
+          border-color: #0F72C8;
+        } 
+      }
+    }
+  }
+}
