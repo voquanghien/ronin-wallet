@@ -1,0 +1,86 @@
+.input-container {
+  .input-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+  }
+
+  .left-title, .right-title {
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    color: #57627B;
+    text-transform: uppercase;
+  }
+
+  .left-title {
+    padding-left: 8px;
+  }
+
+  .right-title {
+    color: #151A30;
+    padding-right: 8px;
+  }
+
+  .input-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .input-element {
+      width: 100%;
+      height: 40px;
+      border-radius: 8px;
+      border: 1px solid #C5CEE0;
+      padding: 0 15px;
+      font-size: 14px;
+      font-weight: 400;
+      z-index: 1;
+
+      &:hover, &:active, &:focus {
+        outline: none;
+
+        &:not(.disabled) {
+          border-color: #1273EA;
+        }        
+      }
+
+      &.isSelection {
+        cursor: pointer;
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+        background-color: #EDF1F7;
+        color: #8F9BB3;
+      }
+
+      &.error {
+        border-color: red;
+      }
+    }
+
+    .left-element, .right-element {
+      z-index: 2;
+      position: absolute;
+    }
+
+    .left-element {
+      left: 15px;
+    }
+
+    .right-element {
+      right: 15px;
+    }
+  }
+
+  .error-message {
+    text-align: left;
+    padding-left: 8px;
+    font-size: 12px;
+    height: 25px;
+    color: red;
+    display: flex;
+    align-items: center;
+  }
+}
